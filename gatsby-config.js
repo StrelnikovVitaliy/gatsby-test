@@ -5,15 +5,6 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-stripe`,
-    {
-      resolve: `gatsby-source-stripe`,
-      options: {
-        objects: ['Product', 'Sku'],
-        secretKey: 'sk_test_rbWPujsCzvXB94U5nyYhGiIe00AloaRC13',
-        downloadFiles: true,
-      },
-    },
       `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -24,6 +15,15 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-stripe`,
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Product', 'Sku'],
+        secretKey: 'sk_test_rbWPujsCzvXB94U5nyYhGiIe00AloaRC13',
+        downloadFiles: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
